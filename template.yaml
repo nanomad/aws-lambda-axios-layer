@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  axios-layer
+
+  Sample SAM Template for AWS Layer
+  
+Resources:
+  AxiosLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: axios-layer/
+      CompatibleRuntimes:
+        - nodejs16.x
+    Metadata:
+      BuildMethod: nodejs16.x
+      BuildArchitecture: x86_64
